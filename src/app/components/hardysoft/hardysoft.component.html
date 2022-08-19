@@ -5,8 +5,72 @@
         <div class="btn-edit" onclick="editar_acercade()"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
         </div>
     </div>
-    <div>
-        <p id="text-acercade">Con una forma de visualización atractia (por ejemplo, porcentajes) mostrarás tu grado de dominio de habilidades duras y blandas. Podés también generar una sección adicional con tu nivel de idiomas.</p>
+    <div class="text-center">
+        
+        <!-- You can now use it in app.component.html -->
+        <circle-progress
+            [percent]="75"
+            [radius]="90"
+            [imageSrc]="'../assets/iconos/logo-html.png'"
+            [showImage]="true"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#ef7f3f'"
+            [innerStrokeColor]="'#ffedbe'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+
+        <!-- You can now use it in app.component.html -->
+        <circle-progress
+            [percent]="65"
+            [radius]="90"
+            [imageSrc]="'../assets/iconos/logo-css.png'"
+            [showImage]="true"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#44b4c4'"
+            [innerStrokeColor]="'#80c9c6'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+
+        <!-- You can now use it in app.component.html -->
+        <circle-progress
+            [percent]="65"
+            [radius]="90"
+            [imageSrc]="'../assets/iconos/logo-java.png'"
+            [showImage]="true"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+
+        <!-- You can now use it in app.component.html -->
+        <circle-progress
+            [percent]="65"
+            [radius]="90"
+            [imageSrc]="'../assets/iconos/logo-github.png'"
+            [showImage]="true"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#7f00b2'"
+            [innerStrokeColor]="'#bc4ed8'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+
     </div>
     <div>
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
