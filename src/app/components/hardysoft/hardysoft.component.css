@@ -1,0 +1,20 @@
+.divider {
+    height: 4px;
+    width: 40px;
+    background-color:#0CB7F2;
+    margin-top: -10px;
+    margin-bottom: 1em;
+  }
+  
+  /* Selector de clase */
+  .mat-card {
+      /*Atributos*/
+      border-radius: 32px;
+      margin: 10px 10px;
+      padding: 20px;
+      border-color:#757575;
+  }
+  
+  .mat-card#first-card {
+      padding: 0;
+  }

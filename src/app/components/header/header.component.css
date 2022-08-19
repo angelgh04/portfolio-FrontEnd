@@ -1,0 +1,277 @@
+.divider {
+  height: 4px;
+  width: 40px;
+  background-color:#0CB7F2;
+  margin-top: -10px;
+  margin-bottom: 1em;
+}
+
+/* Selector de clase */
+.mat-card {
+    /*Atributos*/
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 20px;
+    border-color:#757575;
+}
+
+.mat-card#first-card {
+    padding: 0;
+}
+
+div#profile-background {
+    display: flex;
+    z-index: 1;
+}
+
+div#profile-background img {
+    width: 100%;
+    height: 350px;
+    /*Para lograr las esquinas redondeadas*/
+    border-radius: 32px 32px 0 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+}
+/*Prueba menu*/
+.programa {
+    color: #fff;
+    padding: 10px 10px;
+}
+
+/*Para la etiqueta de nav*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -380px;
+    padding: 30px 30px;
+}
+
+.logo{
+    max-height: 100px;
+    padding: 5px 5px;
+}
+
+nav ul li{
+    /*Quitamos lo subrayado y la posición vertical a horizontal*/
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    position: relative;
+    padding: 5px 0;
+}
+
+/*Cambio de color cuándo el mouse este sobre el menú*/
+nav ul li a:hover{
+    color: #0CB7F2;
+}
+
+nav ul li a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #0CB7F2;
+    transition: .3s;
+    bottom: 0;
+}
+
+nav ul li a:hover:after{
+    width: 100%;
+}
+.btn-edit{
+    display: flex;
+    
+}
+.btn{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 40px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: #0CB7F2;
+    border: 2px solid #0CB7F2;
+}
+.btn:hover{
+    background: transparent;
+    border-color: #0CB7F2;
+    color: #0CB7F2;
+}
+
+div#info-data {
+    display: flex;
+    /*Para que se ubique hacia la derecha*/
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-top: -80px;
+}
+
+div#info-data h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#info-data ul#info-details {
+    width: 500px;
+    list-style: none;
+    flex-shrink: 0;
+    margin-top: 60px;
+}
+
+div#info-data ul#info-details li a {
+    color:black;
+    display: flex;
+    text-decoration: none;
+}
+
+div#info-data ul#info-details li a h2{
+    font-size: 1rem;
+    font-weight: 400;
+    align-self: center;
+    vertical-align: baseline;
+}
+
+div#info-data ul#info-details li a img {
+    width: 32px;
+    height: 31px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+ul.items-list {
+    list-style: none inside;
+}
+
+ul.items-list li {
+    display: flex;
+    margin: 10px 0;
+}
+
+ul.items-list li div.data-container {
+    flex-grow: 1;
+}
+
+ul.items-list li div.data-container a {
+    display: flex;
+    color: black
+}
+
+
+/*Para probar*/
+.content{
+    left: 8%;
+}
+.content .title{
+    color: #1f1f25;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: -4%;
+}
+.content h2{
+    color: #1f1f25;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 70%;
+}
+.content h2 span{
+    color:#0CB7F2;
+    text-transform: uppercase;
+}
+.content p{
+    width: 100%;
+    color: #757575;
+    margin-bottom: 5px;
+}
+
+/*Contenedor de fotos y redes*/
+.info-redes {
+    width: 100%;
+    margin-top: 260px;
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.info-img {
+    display: grid;
+    grid-column: 1/4;
+    padding: 20px;
+    margin-top: -190px;
+}
+
+.redes {
+    display: flex;
+    width: 90%;
+    grid-column: 5/6;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin-top: -50px;
+}
+  
+.redes li {
+    list-style: none;
+}
+  
+.redes a {
+    list-style: none;
+}
+
+.redes i {
+    font-size: 2em;
+    color:#0cb7f2;
+}
+/*Fin de prueba contenedor redes*/
+
+
+/*Para pantallas pequeñas*/
+@media screen and (max-width:768px) {
+    .programa {
+        padding: 5px 5px;
+    }
+    .programa h1 {
+        font-size: 1.5em;
+    }
+    .info-img {
+        margin-left: 25%;
+        grid-column: 1/-1;  
+    }
+    .redes {
+        padding: 40px 20px;
+        margin-left: 5%;
+        grid-column: 1/-1;  
+      }
+      div#info-data {
+        display: flex;
+        /*Para que se ubique hacia la derecha*/
+        justify-content: space-between;
+        margin-left: 2%;
+        margin-top: -40px;
+    }
+    div#info-data ul#info-details {
+        width: 150px;
+        list-style: none;
+        flex-shrink: 0;
+    }
+    .logo{
+        max-height: 40px;
+    }
+}
+/*Fin de pantallas pequeñas*/

@@ -1,0 +1,115 @@
+.divider {
+  height: 4px;
+  width: 40px;
+  background-color:#0CB7F2;
+  margin-top: -10px;
+  margin-bottom: 1em;
+}
+
+/* Selector de clase */
+.mat-card {
+    /*Atributos*/
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 20px;
+    border-color:#757575;
+}
+
+.mat-card#first-card {
+    padding: 0;
+}
+
+div#info-data {
+    display: flex;
+    /*Para que se ubique hacia la derecha*/
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-top: -80px;
+}
+
+div#info-data h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#info-data ul#info-details {
+    width: 500px;
+    list-style: none;
+    flex-shrink: 0;
+    margin-top: 60px;
+}
+
+div#info-data ul#info-details li a {
+    color:black;
+    display: flex;
+    text-decoration: none;
+}
+
+div#info-data ul#info-details li a h2{
+    font-size: 1rem;
+    font-weight: 400;
+    align-self: center;
+    vertical-align: baseline;
+}
+
+div#info-data ul#info-details li a img {
+    width: 32px;
+    height: 31px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+ul.items-list {
+    list-style: none inside;
+}
+
+ul.items-list li {
+    display: flex;
+    margin: 10px 0;
+}
+
+ul.items-list li div.data-container {
+    flex-grow: 1;
+}
+
+ul.items-list li div.data-container a {
+    display: flex;
+    color: black
+}
+
+
+/*Para pantallas pequeñas*/
+@media screen and (max-width:768px) {
+    .programa {
+        padding: 5px 5px;
+    }
+    .programa h1 {
+        font-size: 1.5em;
+    }
+    .info-img {
+        margin-left: 25%;
+        grid-column: 1/-1;  
+    }
+    .redes {
+        padding: 40px 20px;
+        margin-left: 5%;
+        grid-column: 1/-1;  
+      }
+      div#info-data {
+        display: flex;
+        /*Para que se ubique hacia la derecha*/
+        justify-content: space-between;
+        margin-left: 2%;
+        margin-top: -40px;
+    }
+    div#info-data ul#info-details {
+        width: 150px;
+        list-style: none;
+        flex-shrink: 0;
+    }
+    .logo{
+        max-height: 40px;
+    }
+}
+/*Fin de pantallas pequeñas*/
+

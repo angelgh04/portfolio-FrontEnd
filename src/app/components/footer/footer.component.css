@@ -1,0 +1,30 @@
+.footer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;
+    height: 200px;
+    background-color: #0CB7F2;
+}
+  
+.footer-content h2 {
+    font-size: 3em;
+}
+  
+.footer-content h5,
+.sotial-network i {
+    font-size: 1.5em;
+}
+
+.sotial-network {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+}
+.sotial-network a {
+    color: #fff;
+    list-style: none;
+}

@@ -1,0 +1,82 @@
+.divider {
+    height: 4px;
+    width: 40px;
+    background-color:#0CB7F2;
+    margin-top: -10px;
+    margin-bottom: 1em;
+  }
+  
+  /* Selector de clase */
+  .mat-card {
+      /*Atributos*/
+      border-radius: 32px;
+      margin: 10px 10px;
+      padding: 20px;
+      border-color:#757575;
+  }
+  
+  .mat-card#first-card {
+      padding: 0;
+  }
+
+  
+/*Contactos*/
+.contact-section {
+    width: 40vw;
+    background-color: #fff;
+    color: #757575;
+    padding-bottom: 1em;
+}
+  
+.container-contact {
+    width: 80vw;
+}
+.contact-form {
+    margin-left: 35%;
+    padding: 3em;
+    align-items: center;
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+  
+.form input {
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #757575;
+    color: #757575;
+}
+  
+.form textarea {
+    height: 100px;
+    background: none;
+    padding: 1.5em;
+    border-bottom: 1px solid #757575;
+    color: #757575;
+}
+  
+.btn-submit {
+    padding: 16px 40px;
+    margin: 1em;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+    color: #fff;
+    background: #0CB7F2;
+    border: 2px solid #0CB7F2;
+}
+  
+.btn-submit:hover {
+    box-shadow: none;
+    background: transparent;
+    border-color: #0CB7F2;
+    color: #0CB7F2;
+}
+/*FIN CONTACTO*/
