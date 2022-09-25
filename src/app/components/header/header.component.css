@@ -243,6 +243,14 @@ ul.items-list li div.data-container a {
 
 /*Para pantallas pequeñas*/
 @media screen and (max-width:768px) {
+    .content .title{
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: -5%;
+    }
+    .content h2{
+        font-size: 25px;
+    }
     .programa {
         padding: 5px 5px;
     }
@@ -257,8 +265,8 @@ ul.items-list li div.data-container a {
         padding: 40px 20px;
         margin-left: 5%;
         grid-column: 1/-1;  
-      }
-      div#info-data {
+    }
+    div#info-data {
         display: flex;
         /*Para que se ubique hacia la derecha*/
         justify-content: space-between;
@@ -271,7 +279,7 @@ ul.items-list li div.data-container a {
         flex-shrink: 0;
     }
     .logo{
-        max-height: 40px;
+        max-height: 0px;
     }
 }
 /*Fin de pantallas pequeñas*/

@@ -80,3 +80,23 @@
     color: #0CB7F2;
 }
 /*FIN CONTACTO*/
+
+
+/*Para pantallas pequeñas*/
+@media screen and (max-width:768px) {
+    .contact-form {
+        margin-left: 5%;
+        padding: 3em;
+        align-items: center;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+    }
+    .btn-submit {
+        padding: 10px 10px;
+        margin: 1em;
+    }
+}
+/*Fin de pantallas pequeñas*/
