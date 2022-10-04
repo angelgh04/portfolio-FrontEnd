@@ -11,6 +11,7 @@
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
     </div>
     <!-- Items de experiencias de trabajo-->
+    <!--
     <div id="info-data" style="padding: 16px">
         <ul id="info-details">
             <li><a href="#">
@@ -23,6 +24,30 @@
                 <img src="../../../assets/NAC_Logo.png">
                 <h2>Año 2012. <br>NÚCLEOS DE ACCESO AL CONOCIMIENTO. <br>Capacitador de Operador de PC I.<br>ABRA PAMPA-JUJUY.</h2>
             </a></li>
+        </ul>
+    </div>
+    -->
+
+    <!--Probamos ngFor con json-->
+    <div id="info-data">
+        <ul id="info-details" *ngFor="let experiencia of experienciaList">
+            <li>
+                    <a href="#">
+                        <div class="logo-image-container">
+                            <img 
+                                class="logo-image"
+                                src="{{experiencia.img}}"
+                            />
+                        </div>
+                        <div class="list-info">
+                            <div>
+                                <time>{{experiencia.start}}</time>
+                                <p>{{experiencia.position}}<br>
+                                {{experiencia.company}}</p>
+                            </div>
+                        </div>
+                    </a>
+            </li>
         </ul>
     </div>
 </div>

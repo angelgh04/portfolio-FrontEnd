@@ -10,19 +10,27 @@
     <div>
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
     </div>
-    <!-- Items de estudios realizados-->
-    <div id="info-data" style="padding: 16px">
-        <ul id="info-details">
-            <li><a href="#">
-                <img src="../../../assets/LogoInstituto.png">
-                <h2>Año 2019. <br>PROFESORADO DE MATEMÁTICA. <br>Instituto de Educación Superior IES. N°1<br>ABRA PAMPA-JUJUY.</h2>
-            </a></li>
-        </ul>
-        <ul id="info-details">
-            <li><a href="#">
-                <img src="../../../assets/LogoInstituto.png">
-                <h2>Año 2011. <br>TÉCNICO EN INFORMÁTICA. <br>Instituto de Educación Superior IES. N°1<br>ABRA PAMPA-JUJUY.</h2>
-            </a></li>
+    <!--Probamos ngFor con json-->
+    <div id="info-data">
+        <ul id="info-details" *ngFor="let educacion of educacionList">
+            <li>
+                    <a href="#">
+                        <div class="logo-image-container">
+                            <img 
+                                class="logo-image"
+                                src="../../../assets/LogoInstituto.png"
+                            />
+                        </div>
+                        <div class="list-info">
+                            <div>
+                                <time>{{educacion.start}}</time>
+                                <p>{{educacion.title}}<br>
+                                {{educacion.school}}<br>
+                                {{educacion.location}}</p>
+                            </div>
+                        </div>
+                    </a>
+            </li>
         </ul>
     </div>
 </div>

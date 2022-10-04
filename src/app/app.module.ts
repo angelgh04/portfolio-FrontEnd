@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     }),
     AppRoutingModule
   ],
+  //Agregamos PorfolioService
   providers: [],
   bootstrap: [AppComponent]
 })

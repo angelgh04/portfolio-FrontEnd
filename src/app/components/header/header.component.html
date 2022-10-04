@@ -46,26 +46,26 @@
     <div id="info-data" style="padding: 16px">
         <div class="content">
             <div class="title">
-                <h2>Angel<span> Rivero</span></h2>
+                <h2>{{miPortfolio.name}}<span> {{miPortfolio.surname}}</span></h2>
             </div>
-            <p>Innovador y entusiasta por la programación, especialmente Python y Java. Por los continuos avances tecnológicos, siempre estoy en constante aprendizaje. Con el tiempo aspiro a convertirme en un gran profesional y mejorar siempre mis habilidades.</p>
+            <p>{{miPortfolio.about}}</p>
             <div id="info-company">
-                Desarrollador Full Stack Developer Jr.
+                {{miPortfolio.position}}
             </div>
             <div id="info-contact">
-                Jujuy (Argentina)
+                {{miPortfolio.ubication}}
                 <span><a href="#">Información de contacto</a></span>
             </div>
         </div>
         <!-- Lista de items-->
         <ul id="info-details">
             <li><a href="#">
-                <img src="../../../assets/OE_Logo.png">
-                <h2>OE. Tallerista de Alfabetización Digital</h2>
+                <img src="{{miPortfolio.company.url}}">
+                <h2>{{miPortfolio.company.name}}</h2>
             </a></li>
             <li><a href="#">
-                <img src="../../../assets/LogoInstituto.png">
-                <h2>IESN°1. Egresado cómo Profesor de Matemática</h2>
+                <img src="{{miPortfolio.school.url}}">
+                <h2>{{miPortfolio.school.name}}</h2>
             </a></li>
         </ul>
     </div>
