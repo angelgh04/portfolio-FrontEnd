@@ -19,7 +19,10 @@
                 <li><a href="#">Portafolio</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
-            <a href="/login" class="btn">Login</a>
+            <a href="/login" class="btn" *ngIf="!isLogged">Login</a>
+            
+            <!--Probamos cerrar sesión-->
+            <a href="/login" class="btn" (click)="onLogOut()" *ngIf="isLogged">Cerrar</a>
         </nav>
         <!--Fin Probando menú Home y Login-->
         

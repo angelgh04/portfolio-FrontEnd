@@ -15,6 +15,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PortfolioService } from './service/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
     ContactoComponent,
     FooterComponent,
     LoginComponent,
-    PortfolioComponent
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
 
     // Specify ng-circle-progress as an import
@@ -46,7 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule
   ],
   //Agregamos PorfolioService
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
