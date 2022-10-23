@@ -19,7 +19,7 @@
                 <li><a href="#">Portafolio</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
-            <a href="#" class="btn">Login</a>
+            <a href="/login" class="btn">Login</a>
         </nav>
         <!--Fin Probando menú Home y Login-->
         
@@ -46,26 +46,26 @@
     <div id="info-data" style="padding: 16px">
         <div class="content">
             <div class="title">
-                <h2>{{miPortfolio.name}}<span> {{miPortfolio.surname}}</span></h2>
+                <h2>{{persona.nombre}}<span> {{persona.apellido}}</span></h2>
             </div>
-            <p>{{miPortfolio.about}}</p>
+            <p>Innovador y entusiasta por la programación, especialmente Python y Java. Siempre estoy en constante aprendizaje y con el tiempo aspiro en convertirme en un gran profesional.</p>
             <div id="info-company">
-                {{miPortfolio.position}}
+                Desarrollador Full Stack Developer Jr.
             </div>
             <div id="info-contact">
-                {{miPortfolio.ubication}}
+                Jujuy (Argentina)
                 <span><a href="#">Información de contacto</a></span>
             </div>
         </div>
         <!-- Lista de items-->
         <ul id="info-details">
             <li><a href="#">
-                <img src="{{miPortfolio.company.url}}">
-                <h2>{{miPortfolio.company.name}}</h2>
+                <img src="../../../assets/OE_Logo.png">
+                <h2>Tallerista de Alfabetización Digital</h2>
             </a></li>
             <li><a href="#">
-                <img src="{{miPortfolio.school.url}}">
-                <h2>{{miPortfolio.school.name}}</h2>
+                <img src="../../../assets/LogoInstituto.png">
+                <h2>IES N°1. Egresado cómo Profesor de Matemática.</h2>
             </a></li>
         </ul>
     </div>

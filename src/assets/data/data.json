@@ -1,0 +1,71 @@
+{
+    "name": "Angel",
+    "surname": "Rivero",
+    "backImage": "",
+    "image": "",
+    "position": "Desarrollador Full Stack Developer Jr.",
+    "company": {
+        "name": "OE. Tallerista de Alfabetización Digital.",
+        "img": "",
+        "url": "#"
+    },
+    "school":{
+        "name": "IES N°1. Egresado cómo Profesor de Matemática.",
+        "img": "",
+        "url": "#"
+    },
+    "ubication":"Jujuy (Argentina)",
+    "about": "Innovador y entusiasta por la programación, especialmente Python y Java. Siempre estoy en constante aprendizaje y con el tiempo aspiro en convertirme en un gran profesional.",
+    "experience":[{
+        "position": "Tallerista de Alfabetización Digital",
+        "company": "OFICINA DE EMPLEO",
+        "img": "src/assets/OE_Logo.png",
+        "start": "Año 2013",
+        "end": "actualidad",
+        "timeElapsed": "1 año"
+    }],
+    "education":[{
+            "school": "Instituto de Educación Superior IES N°1",
+            "title": "PROFESORADO DE MATEMÁTICA",
+            "img": "",
+            "career": "Docente",
+            "score": 0,
+            "location": "ABRA PAMPA-Jujuy.",
+            "start": "Año 2019",
+            "end": "-"
+        },
+        {
+            "school": "Instituto de Educación Superior IES N°1",
+            "title": "TÉCNICO EN INFORMÁTICA",
+            "img": "",
+            "career": "Técnico",
+            "score": 0,
+            "location": "ABRA PAMPA-Jujuy.",
+            "start": "Año 2012",
+            "end": "-"
+        }
+    ],
+    "aptitude":[{
+            "name": "Instituto de Educación Superior IES N°1",
+            "progress": "PROFESORADO DE MATEMÁTICA",
+            "confirms": "",
+            "confirmsNames":[{
+                "name": "Angel"
+            }]
+         },
+         {
+            "name": "Diseño",
+            "confirms": 3,
+            "confirmsNames": [{
+                "name": "Angel"
+            }]
+        }
+    ],
+    "achivements": [{
+            "name": "Huaro App"
+        },
+        {
+            "name": "Lanterns"
+        }
+    ]
+}
