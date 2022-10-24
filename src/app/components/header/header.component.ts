@@ -21,18 +21,19 @@ export class HeaderComponent implements OnInit {
     //});
   //}
   //Antes del Login
-  //persona: persona=new persona('','','');
-  //constructor (public personaService: PersonaService) { }
-  //ngOnInit(): void {
-    //this.personaService.getPersona().subscribe(data=>{this.persona=data})
-  //}
-
+  /*
+  persona: persona=new persona('','','');
+  constructor (public personaService: PersonaService) { }
+  ngOnInit(): void {
+    this.personaService.getPersona().subscribe(data=>{this.persona=data})
+  }
+ */
+  persona: persona = new persona("","","");
   //Probamos con el login
   isLogged = false;
-  persona: persona=new persona('','','');
   constructor (public personaService: PersonaService, private router:Router, private tokenService: TokenService) { }
-  
   ngOnInit(): void {
+    //suscribe es un metodo que escucha, detecta.
     this.personaService.getPersona().subscribe(data=>{this.persona=data})
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -45,5 +46,5 @@ export class HeaderComponent implements OnInit {
     this.tokenService.logOut();
     window.location.reload();
   }
-
+  
 }
