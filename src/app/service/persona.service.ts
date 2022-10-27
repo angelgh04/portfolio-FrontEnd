@@ -15,5 +15,6 @@ export class PersonaService {
   //Observable es para hacer peticiones asincronas. 
   public getPersona(): Observable<persona>{
     return this.http.get<persona>(this.URL+'traer/perfil');
+    console.log("El servicio Portfolio está corriendo");
   }
 }

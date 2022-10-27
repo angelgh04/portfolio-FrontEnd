@@ -6,8 +6,8 @@ export class persona{
     img: String;
 
     constructor(nombre: String, apellido: String, img: String){
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.img=img;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
     }
 }

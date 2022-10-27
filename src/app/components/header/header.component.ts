@@ -34,11 +34,16 @@ export class HeaderComponent implements OnInit {
   constructor (public personaService: PersonaService, private router:Router, private tokenService: TokenService) { }
   ngOnInit(): void {
     //suscribe es un metodo que escucha, detecta.
-    this.personaService.getPersona().subscribe(data=>{this.persona=data})
+    this.personaService.getPersona().subscribe(data => {
+      this.persona = data
+      console.log("Estamos en Data "+ data);
+    })
     if(this.tokenService.getToken()){
       this.isLogged=true;
+      console.log("Token activado");
     }else{
       this.isLogged=false;
+      console.log("Token desactivado");
     }
   }
 
