@@ -1,17 +1,29 @@
 <div class="card mat-card">
-    <div class="card-titles">
-            <h2>Experiencia</h2>
-            <div class="btn-edit" onclick="editar_acercade()"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-            </div>
+  <div class="card-titles">
+    <div class="btn-edit">
+        <a href="/nuevaexp" *ngIf="isLogged" class="btn-right">
+          <i class="fas fa-plus">Agregar</i></a>
+      </div>
+    <h2>Experiencia</h2>  
+  </div>
+  <!-- Boton del video tuto
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
     </div>
+    -->
+  <!--
     <div>
-        <p id="text-acercade">Aquí colocaras toda la información de los lugares donde has trabajado, incluyendo título del puesto, periodo, logo de la empresa, si lo encontrás, y descripción de las actiivdades realizadas en ese puesto.</p>
+        <p id="text-acercade">Aqui va información de los lugares donde has trabajado, incluyendo título del puesto, periodo, logo de la empresa, si lo encontrás, y descripción de las actiivdades realizadas en ese puesto.</p>
     </div>
+    
     <div>
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
     </div>
-    <!-- Items de experiencias de trabajo-->
-    <!--
+    -->
+
+  <!-- Items de experiencias de trabajo-->
+  <!--
     <div id="info-data" style="padding: 16px">
         <ul id="info-details">
             <li><a href="#">
@@ -28,8 +40,8 @@
     </div>
     -->
 
-    <!--Probamos ngFor con json-->
-    <!--Probamos ngFor con json
+  <!--Probamos ngFor con json-->
+  <!--Probamos ngFor con json
     <div id="info-data">
         <ul id="info-details" *ngFor="let experiencia of experienciaList">
             <li>
@@ -52,4 +64,74 @@
         </ul>
     </div>
     -->
+
+  <!--Probamos ngFor con el back-->
+  <!--
+    <div id="info-data">
+        <ul id="info-details" *ngFor="let Experiencia of expe">
+            <li>
+                    <a href="#">
+                        <div class="logo-image-container">
+                            <img 
+                                class="logo-image"
+                                src="../../../assets/OE_Logo.png"
+                            />
+                        </div>
+                        <div class="list-info">
+                            <div>
+                                <time>Año 2013</time>
+                                <p>{{Experiencia.descripcionE}}<br>
+                                {{Experiencia.nombreE}}</p>
+                                
+                            </div>
+
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-danger">
+                                    <i class="bi bi-trash-fill"></i> BORRAR</button>
+                            </td>
+                        </div>
+                    </a>
+            </li>
+        </ul>
+    </div>
+    -->
+  <div class="col-lg-11">
+    <table class="table" id="info-data">
+      <tbody>
+        <tr *ngFor="let Experiencia of expe">
+          <td>
+            <div id="info-data">
+              <ul id="info-details">
+                <li>
+                  <a href="#">
+                    <img src="../../../assets/OE_Logo.png" />
+                    <h2>
+                      Año 2013. <br/> {{ Experiencia.nombreE }}<br/>
+                      ABRA PAMPA-JUJUY.
+                    </h2>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            {{ Experiencia.descripcionE }}                
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-light" 
+              routerLink="/editexp/{{ Experiencia.id }}">
+              <i class="fas fa-pen"> </i>
+            </button>
+            <button class="btn btn-light" (click)="delete(Experiencia.id)">
+              <i class="fas fa-trash-alt"> </i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

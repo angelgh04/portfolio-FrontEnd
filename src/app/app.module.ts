@@ -17,6 +17,8 @@ import { PortfolioService } from './service/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { interceptorProvider } from './service/interceptor-service';
     FooterComponent,
     LoginComponent,
     PortfolioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,
