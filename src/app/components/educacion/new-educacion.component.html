@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="tituloE">Título</label>
+                    <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="tituloE" required>
+                </div>
+                <div class="form-group">
+                    <label for="institutoE">Institución</label>
+                    <input type="text" class="form-control" id="institutoE" name="institutoE" [(ngModel)]="institutoE" required>
+                </div>
+                <div class="form-group">
+                    <label for="lugarE">Lugar</label>
+                    <input type="text" class="form-control" id="lugarE" name="lugarE" [(ngModel)]="lugarE" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaE">Fecha</label>
+                    <input type="text" class="form-control" id="fechaE" name="fechaE" [(ngModel)]="fechaE" required>
+                </div>
+                <button class="btn btn-primary">
+                    Agregar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
