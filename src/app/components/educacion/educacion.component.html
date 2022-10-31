@@ -8,17 +8,10 @@
     <h2>Educación</h2>
     <div class="divider"></div>
   </div>
-  <div>
-    <!--<p id="text-acercade">Escribr toda la información académica, certificaciones, cursos, y todo lo relacionado al título con que actualmente contás. Es importante detallar la información de la institución, el logo (de ser posible), nombre, carrera o título estudiado, y en qué periodo o año</p>-->
+  <div *ngIf="isLogged">
+    <p id="text-acercade">Escribr toda la información académica, certificaciones, cursos, y todo lo relacionado al título con que actualmente contás. Es importante detallar la información de la institución, el logo (de ser posible), nombre, carrera o título estudiado, y en qué periodo o año</p>
   </div>
-  <div>
-    <input
-      id="edit-acercade"
-      type="text"
-      oninput="escribir_acercade(this.value)"
-      style="display: none"
-    />
-  </div>
+  
   <!--Probamos ngFor con json-->
   <!--Probamos ngFor con json
     <div id="info-data">

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre de Tecnología</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje de Aprendizaje</label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="colorOuter">Color Outer</label>
+                    <input type="text" class="form-control" id="colorOuter" name="colorOuter" [(ngModel)]="colorOuter" required>
+                </div>
+                <div class="form-group">
+                    <label for="colorInner">Color Inner</label>
+                    <input type="text" class="form-control" id="colorInner" name="colorInner" [(ngModel)]="colorInner" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagSrc">URL Logo</label>
+                    <input type="text" class="form-control" id="imagSrc" name="imagSrc" [(ngModel)]="imagSrc" required>
+                </div>
+                <button class="btn btn-primary">
+                    Agregar Skill
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

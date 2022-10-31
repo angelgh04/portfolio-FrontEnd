@@ -1,13 +1,15 @@
 <div class="card mat-card">
-    <div class="card-titles">
-        <h2>Hard & Soft Skills</h2>
-        <div class="divider"></div>
-        <div class="btn-edit" onclick="editar_acercade()"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-        </div>
+  <div class="card-titles">
+    <h2>Hard & Soft Skills</h2>
+    <div class="divider"></div>
+    <div class="btn-edit">
+      <a href="/newskill" *ngIf="isLogged" class="btn-right">
+        <i class="fas fa-plus"></i
+      ></a>
     </div>
+  </div>
+  <!--
     <div class="text-center">
-        
-        <!-- You can now use it in app.component.html -->
         <circle-progress
             [percent]="75"
             [radius]="90"
@@ -22,8 +24,6 @@
             [animation]="true"
             [animationDuration]="300"
         ></circle-progress>
-
-        <!-- You can now use it in app.component.html -->
         <circle-progress
             [percent]="65"
             [radius]="90"
@@ -38,8 +38,6 @@
             [animation]="true"
             [animationDuration]="300"
         ></circle-progress>
-
-        <!-- You can now use it in app.component.html -->
         <circle-progress
             [percent]="65"
             [radius]="90"
@@ -54,8 +52,6 @@
             [animation]="true"
             [animationDuration]="300"
         ></circle-progress>
-
-        <!-- You can now use it in app.component.html -->
         <circle-progress
             [percent]="65"
             [radius]="90"
@@ -75,6 +71,29 @@
     <div>
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
     </div>
-
-    
+    -->
+    <div class="text-center" style="margin: auto;" *ngFor="let skill of skill">
+        <circle-progress
+        [percent]="skill.porcentaje"
+        [radius]="90"
+        [imageSrc]="'../assets/iconos/logo-css.png'"
+        [showImage]="true"
+        [imageHeight]="90"
+        [imageWidth]="90"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="skill.colorOuter"
+        [innerStrokeColor]="skill.colorInner"
+        [animation]="true"
+        [animationDuration]="300"
+        ></circle-progress>
+        <div *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editskill/{{ skill.id }}">
+            <i class="fas fa-pen"></i>
+        </button>
+        <button class="btn btn-light" (click)="delete(skill.id)">
+            <i class="fas fa-trash-alt"></i>
+        </button>
+        </div>
+    </div>
 </div>
