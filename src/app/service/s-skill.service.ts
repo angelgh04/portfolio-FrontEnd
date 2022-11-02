@@ -9,7 +9,8 @@ import { Skill } from '../model/skill';
 })
 export class SSkillService {
 
-  URL = environment.URL + 'skill/';
+  //URL = environment.URL + 'skill/';
+  URL = 'https://backend-ar.herokuapp.com/skill/';
   
   constructor(private httpClient: HttpClient) { }
 

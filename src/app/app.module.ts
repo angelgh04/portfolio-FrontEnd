@@ -23,6 +23,7 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { EditSkillComponent } from './components/hardysoft/edit-skill.component';
 import { NewSkillComponent } from './components/hardysoft/new-skill.component';
+import { EditHeaderComponent } from './components/header/edit-header.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NewSkillComponent } from './components/hardysoft/new-skill.component';
     EditEducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
+    EditHeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,10 +28,33 @@ export class HeaderComponent implements OnInit {
     this.personaService.getPersona().subscribe(data=>{this.persona=data})
   }
  */
-  persona: persona = new persona("","","");
+  persona: persona = null;
   //Probamos con el login
-  isLogged = false;
   constructor (public personaService: PersonaService, private router:Router, private tokenService: TokenService) { }
+  isLogged = false;
+  ngOnInit(): void{
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+      console.log("Token activado");
+    }else{
+      this.isLogged=false;
+      console.log("Token desactivado");
+    }
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(
+      data =>{
+        this.persona = data
+      })
+  }
+
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+  /*
   ngOnInit(): void {
     //suscribe es un metodo que escucha, detecta.
     this.personaService.getPersona().subscribe(data => {
@@ -51,5 +74,5 @@ export class HeaderComponent implements OnInit {
     this.tokenService.logOut();
     window.location.reload();
   }
-  
+  */
 }
