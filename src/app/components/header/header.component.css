@@ -131,12 +131,14 @@ div#info-data ul#info-details {
     list-style: none;
     flex-shrink: 0;
     margin-top: 60px;
+    padding: 25px 10px;
 }
 
 div#info-data ul#info-details li a {
     color:black;
     display: flex;
     text-decoration: none;
+    padding: 8px 10px;
 }
 
 div#info-data ul#info-details li a h2{
@@ -175,6 +177,7 @@ ul.items-list li div.data-container a {
 /*Para probar*/
 .content{
     left: 8%;
+    padding: 25px 10px;
 }
 .content .title{
     color: #1f1f25;
@@ -258,8 +261,10 @@ ul.items-list li div.data-container a {
         font-size: 1.5em;
     }
     .info-img {
-        margin-left: 25%;
-        grid-column: 1/-1;  
+        margin-left: 5%;
+        grid-column: 1/-1;
+        /*flex-shrink no permite adaptar el tamaño*/
+        flex-shrink: 0;  
     }
     .redes {
         padding: 40px 20px;
@@ -269,17 +274,32 @@ ul.items-list li div.data-container a {
     div#info-data {
         display: flex;
         /*Para que se ubique hacia la derecha*/
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         margin-left: 2%;
         margin-top: -40px;
+        /*Se agregó*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     div#info-data ul#info-details {
-        width: 150px;
+        width: auto;
+        padding: 2px 10px;
         list-style: none;
         flex-shrink: 0;
+        /*Se agregó*/
+        display: flex;
+        flex-direction: column;
     }
     .logo{
-        max-height: 0px;
+        max-height: 0px;   
     }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
 /*Fin de pantallas pequeñas*/

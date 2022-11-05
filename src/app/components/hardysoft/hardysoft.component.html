@@ -72,28 +72,30 @@
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
     </div>
     -->
-    <div class="text-center" style="margin: auto;" *ngFor="let skill of skill">
-        <circle-progress
-        [percent]="skill.porcentaje"
-        [radius]="90"
-        [imageSrc]="'../assets/iconos/logo-css.png'"
-        [showImage]="true"
-        [imageHeight]="90"
-        [imageWidth]="90"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="skill.colorOuter"
-        [innerStrokeColor]="skill.colorInner"
-        [animation]="true"
-        [animationDuration]="300"
-        ></circle-progress>
-        <div *ngIf="isLogged">
-        <button class="btn btn-light" routerLink="/editskill/{{ skill.id }}">
-            <i class="fas fa-pen"></i>
-        </button>
-        <button class="btn btn-light" (click)="delete(skill.id)">
-            <i class="fas fa-trash-alt"></i>
-        </button>
-        </div>
+    <div class="grid" >
+        <ng-container *ngFor="let skill of skill">
+            <circle-progress
+            [percent]="skill.porcentaje"
+            [radius]="90"
+            [imageSrc]="skill.imagSrc"
+            [showImage]="true"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="skill.colorOuter"
+            [innerStrokeColor]="skill.colorInner"
+            [animation]="true"
+            [animationDuration]="300"
+            ></circle-progress>
+            <div *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editskill/{{ skill.id }}">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button class="btn btn-light" (click)="delete(skill.id)">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </ng-container>
     </div>
 </div>

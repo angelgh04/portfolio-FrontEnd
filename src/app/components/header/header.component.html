@@ -30,7 +30,7 @@
         <div class="info-redes">
             <div class="info-img" style="padding: 16px">
                 <img class="profile-image" src="../../../assets/profile-pic.jpg">
-                <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                <div class="btn-edit"><a href="#" class="btn-right" *ngIf="isLogged"><i class="fa fa-pen"></i></a></div>
             </div>
             <div class="redes">
                 <!--<a href="#"><i class="fab fa-github"></i></a>-->
@@ -41,9 +41,9 @@
         </div>
         <!--Fin de prueba-->
     </div>
-    <div>
+    <!--<div>
         <input id="edit-acercade" type="text" oninput="escribir_acercade(this.value)" style="display:none">
-    </div>
+    </div>-->
     
     <!--Información Personal-->
     <div id="info-data" style="padding: 16px">

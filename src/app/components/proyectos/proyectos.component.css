@@ -120,6 +120,7 @@
       div#info-data ul#info-details {
           width: 150px;
           list-style: none;
+          /*flex-shrink no permite adaptar el tamaño*/
           flex-shrink: 0;
       }
       .logo{
