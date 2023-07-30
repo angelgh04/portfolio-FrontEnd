@@ -11,6 +11,8 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
+  lugarE: string = '';
+  fechaE: string = '';
 
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
@@ -18,13 +20,13 @@ export class NewExperienciaComponent implements OnInit {
   }
 
   onCreate(): void{
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.lugarE, this.fechaE);
     this.sExperiencia.save(expe).subscribe(
       data=>{
       alert("La Experiencia fué agregada a tu Portfolio");
       this.router.navigate(['']);
     }, err => {
-      alert("Sucedió un error, no se pudo guardar Nueva Experiencia");
+      alert("Revisá que la experiencia ingresada no se encuentre registrada");
       this.router.navigate(['']);
     })
   }
