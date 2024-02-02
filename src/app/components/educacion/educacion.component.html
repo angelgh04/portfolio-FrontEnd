@@ -11,33 +11,7 @@
   <div *ngIf="isLogged">
     <p id="text-acercade">Escribr toda la información académica, certificaciones, cursos, y todo lo relacionado al título con que actualmente contás. Es importante detallar la información de la institución, el logo (de ser posible), nombre, carrera o título estudiado, y en qué periodo o año</p>
   </div>
-  
-  <!--Probamos ngFor con json-->
-  <!--Probamos ngFor con json
-    <div id="info-data">
-        <ul id="info-details" *ngFor="let educacion of educacionList">
-            <li>
-                    <a href="#">
-                        <div class="logo-image-container">
-                            <img 
-                                class="logo-image"
-                                src="../../../assets/LogoInstituto.png"
-                            />
-                        </div>
-                        <div class="list-info">
-                            <div>
-                                <time>{{educacion.start}}</time>
-                                <p>{{educacion.title}}<br>
-                                {{educacion.school}}<br>
-                                {{educacion.location}}</p>
-                            </div>
-                        </div>
-                    </a>
-            </li>
-        </ul>
-    </div>
-    -->
-  <div class="col-lg-11">
+    <div class="col-lg-11">
     <table class="table" id="info-data">
       <tbody>
         <tr *ngFor="let Educacion of educacion">
@@ -46,9 +20,9 @@
               <ul id="info-details">
                 <li>
                   <a href="#">
-                    <img src="../../../assets/OE_Logo.png" />
+                    <img src="../../../assets/LogoInstituto.png" />
                     <h2>
-                      Año 2013. <br />
+                      Año {{ Educacion.fechaE }} <br />
                       {{ Educacion.tituloE }}<br />
                       {{ Educacion.lugarE }}
                     </h2>
